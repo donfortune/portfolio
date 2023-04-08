@@ -16,14 +16,14 @@ st.write(content)
 
 st.write('Below you can find some of the apps i ave built with python. feel free to contact me!')
 
-col1, col2 = st.columns(2)
+col1, empty_col,  col2 = st.columns(3)
 data = pandas.read_csv('data.csv', sep=';')
 with col1:
     for index, row in data[:10].iterrows():
         st.header(row['title'])
         st.write(row['description'])
-        st.image(row['image'])
-        st.write(row['url'])
+        st.image("images/" + row['image'])
+        st.write(f"[Source Code]({row['url']})")
 
 
 
@@ -34,5 +34,7 @@ with col2:
     for index, row in data[10:].iterrows():
         st.header(row['title'])
         st.write(row['description'])
-        st.write(row['url'])
+        st.image("images/" + row['image'])
+
+        st.write(f"[Source Code]({row['url']})")
 
