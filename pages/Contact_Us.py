@@ -1,4 +1,5 @@
 import streamlit as st
+from send_email import send_email
 
 st.header('Contact Me')
 with st.form(key='form'):
@@ -6,4 +7,5 @@ with st.form(key='form'):
     text = st.text_area('Write your message here...')
     button = st.form_submit_button('Submit')
     if button:
-        print('Button was pressed')
+        send_email(text)
+        st.info('Your Email Was Sent Successfully!')
