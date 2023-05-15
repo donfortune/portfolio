@@ -1,10 +1,10 @@
-import streamlit as st
-import pandas
+import streamlit as st 
+import pandas 
 
 st.set_page_config(layout='wide')
 
 
-st.image('images/photo.png')
+st.image('images/photo.png') #main image
 
 
 st.title('Don-fortune Tangban')
