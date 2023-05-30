@@ -1,7 +1,7 @@
 import streamlit as st 
 import pandas 
 
-st.set_page_config(layout='wide')
+st.set_page_config(layout='wide') #page configuratio
 
 
 st.image('images/photo.png') #main image
