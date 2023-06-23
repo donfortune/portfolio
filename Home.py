@@ -17,7 +17,7 @@ st.write(content)
 st.write('Below you can find some of the apps i ave built with python. feel free to contact me!')
 
 col1, empty_col,  col2 = st.columns(3)
-data = pandas.read_csv('data.csv', sep=';')
+data = pandas.read_csv('data.csv', sep=';') #read csv files
 with col1:
     for index, row in data[:10].iterrows():
         st.header(row['title'])
